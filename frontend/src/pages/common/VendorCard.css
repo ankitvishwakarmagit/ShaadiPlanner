@@ -1,0 +1,82 @@
+.vendorCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-decoration: none;
+  padding: 20px 16px;
+  background: #FFFFFF;
+  border: 1.5px solid #F1F5F9;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  min-width: 110px;
+  max-width: 140px;
+  flex: 1;
+  transition: var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.vendorCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--primary-gradient);
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+
+.vendorCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+  border-color: transparent;
+}
+
+.vendorCard:hover::before {
+  opacity: 1;
+}
+
+.vendorCard-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  position: relative;
+  z-index: 1;
+}
+
+.vendorCard:hover .vendorCard-icon {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.vendorCard-icon i {
+  font-size: 22px;
+  color: var(--primary);
+  transition: var(--transition-fast);
+}
+
+.vendorCard:hover .vendorCard-icon i {
+  color: #FFFFFF;
+}
+
+.vendorCard p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--secondary);
+  text-align: center;
+  margin: 0;
+  line-height: 1.3;
+  position: relative;
+  z-index: 1;
+  transition: var(--transition-fast);
+}
+
+.vendorCard:hover p {
+  color: #FFFFFF;
+}

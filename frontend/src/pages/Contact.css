@@ -1,0 +1,82 @@
+.contact-main {
+  margin-top: 72px;
+  padding: 60px 0 !important;
+  background: var(--bg-main);
+  min-height: calc(100vh - 72px);
+}
+
+.envolop-background {
+  background-size: contain !important;
+  background-position: center !important;
+}
+
+#message {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid #E2E8F0;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+  color: var(--secondary);
+  background: #F8FAFC;
+  resize: vertical;
+  min-height: 120px;
+  box-sizing: border-box;
+  transition: var(--transition-fast);
+}
+
+#message:focus,
+#message:active {
+  outline: none;
+  border-color: var(--primary);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(215, 56, 94, 0.12);
+}
+
+#message::placeholder {
+  color: #94A3B8;
+  font-size: 15px;
+}
+
+#contact-form {
+  background: #FFFFFF;
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  border: 1px solid #E2E8F0;
+}
+
+#contact-form h5 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 24px;
+}
+
+#contact-form input[type="text"] {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid #E2E8F0;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  color: var(--secondary);
+  background: #F8FAFC;
+  outline: none;
+  transition: var(--transition-fast);
+}
+
+#contact-form input[type="text"]:focus {
+  border-color: var(--primary);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(215, 56, 94, 0.12);
+}
+
+@media (max-width: 768px) {
+  .contact-main {
+    padding: 30px 16px !important;
+  }
+  #contact-form {
+    padding: 24px;
+  }
+}

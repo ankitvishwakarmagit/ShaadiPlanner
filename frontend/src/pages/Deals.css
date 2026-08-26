@@ -1,0 +1,461 @@
+.deals-page-container {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  margin-top: 90px;
+}
+
+.deals-page-title {
+  font-family: 'Outfit', 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  color: var(--secondary);
+  font-weight: 800;
+  margin-bottom: 28px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.deals-page-content {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+}
+
+/* Sidebar Filters */
+.deals-sidebar {
+  width: 320px;
+  background: #FFFFFF;
+  padding: 24px;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.deals-filter-header {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.25rem;
+  color: var(--secondary);
+  font-weight: 700;
+  margin-bottom: 16px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--primary-light);
+}
+
+.deals-filter-header i {
+  color: var(--primary);
+  transition: var(--transition-fast);
+}
+
+.deals-filter-content {
+  display: none;
+  padding-top: 10px;
+}
+
+.deals-filter-content.show {
+  display: block;
+}
+
+.deals-filter-section {
+  border-bottom: 1px solid #F1F5F9;
+  padding: 18px 0;
+}
+
+.deals-filter-section:last-child {
+  border-bottom: none;
+}
+
+.deals-filter-title {
+  width: 100%;
+  color: var(--secondary);
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  display: inline-block;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.deals-filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.deals-filter-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 0;
+}
+
+.deals-filter-option input[type="checkbox"] {
+  accent-color: var(--primary);
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.deals-filter-option label {
+  color: var(--text-main);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  margin-bottom: 0;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.deals-filter-option label:hover {
+  color: var(--primary);
+}
+
+/* Main Content */
+.deals-main-content {
+  flex: 1;
+}
+
+/* Service Navigation */
+.deals-service-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border-bottom: 2px solid #E2E8F0;
+  margin-bottom: 28px;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.deals-service-nav::-webkit-scrollbar {
+  height: 4px;
+}
+
+.deals-service-nav a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: var(--radius-pill);
+  transition: var(--transition-fast);
+  white-space: nowrap;
+}
+
+.deals-service-nav a.active {
+  color: var(--primary);
+  background: var(--primary-light);
+}
+
+.deals-service-nav a:hover:not(.active) {
+  color: var(--secondary);
+  background: #F1F5F9;
+}
+
+.deals-results-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  background: #FFFFFF;
+  padding: 16px 24px;
+  border-radius: var(--radius-md);
+  border: 1px solid #E2E8F0;
+  box-shadow: var(--shadow-sm);
+}
+
+.deals-results-count {
+  font-size: 1rem;
+  color: var(--secondary);
+  font-weight: 600;
+  font-family: 'Outfit', sans-serif;
+}
+
+.deals-sort-filter {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.deals-sort-filter label {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  margin: 0;
+}
+
+.deals-sort-filter select {
+  padding: 8px 16px;
+  border: 1.5px solid #E2E8F0;
+  border-radius: var(--radius-pill);
+  font-size: 0.9rem;
+  color: var(--secondary);
+  font-weight: 600;
+  background: #FFFFFF;
+  outline: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.deals-sort-filter select:focus {
+  border-color: var(--primary);
+}
+
+/* Service Cards Container */
+.deals-service-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.deals-service-card {
+  display: flex;
+  flex-direction: row;
+  height: 220px;
+  width: 100%;
+  margin-bottom: 20px;
+  background: #fff;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-normal);
+}
+
+.deals-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(215, 56, 94, 0.3);
+}
+
+.deals-card-image {
+  width: 320px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.deals-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.deals-service-card:hover .deals-card-image img {
+  transform: scale(1.06);
+}
+
+.deals-card-content {
+  flex: 1;
+  background: #ffffff;
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.deals-card-top {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.deals-card-title {
+  color: var(--secondary);
+  font-family: "Outfit", "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.deals-card-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-grow: 1;
+}
+
+.deals-card-rating {
+  font-size: 0.9rem;
+  color: #D97706;
+  font-weight: 600;
+}
+
+.deals-card-rating i {
+  color: var(--accent-gold);
+  margin-right: 4px;
+}
+
+.deals-card-address {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.deals-card-address i {
+  color: var(--primary);
+}
+
+.deals-card-description {
+  font-size: 0.875rem;
+  color: #475569;
+  font-weight: 400;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.deals-card-divider {
+  border-top: 1px solid #F1F5F9;
+  margin: 12px 0;
+}
+
+.deals-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deals-card-footer-title {
+  color: var(--secondary);
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.deals-card-footer-price {
+  color: var(--primary);
+  font-family: "Outfit", sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.deals-discount-label {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--primary-gradient);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.75rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(215, 56, 94, 0.3);
+  z-index: 2;
+}
+
+/* Pagination */
+.deals-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.deals-pagination button {
+  padding: 10px 18px;
+  border: 1.5px solid #E2E8F0;
+  border-radius: var(--radius-pill);
+  background: #fff;
+  color: var(--secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.deals-pagination button.active {
+  background: var(--primary-gradient);
+  color: #fff;
+  border-color: transparent;
+  box-shadow: var(--shadow-glow);
+}
+
+.deals-pagination button:hover:not(.active):not(:disabled) {
+  background: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.deals-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.deals-loading-spinner {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--secondary);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.deals-error-message {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--primary);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.deals-no-results {
+  text-align: center;
+  padding: 60px 0;
+  color: var(--text-muted);
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .deals-page-content {
+    flex-direction: column;
+  }
+  .deals-sidebar {
+    width: 100%;
+    position: static;
+  }
+  .deals-service-card {
+    width: 100%;
+  }
+  .deals-card-image {
+    width: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .deals-service-card {
+    flex-direction: column;
+    height: auto;
+  }
+  .deals-card-image {
+    width: 100%;
+    height: 200px;
+  }
+  .deals-card-content {
+    padding: 16px;
+  }
+  .deals-results-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+}

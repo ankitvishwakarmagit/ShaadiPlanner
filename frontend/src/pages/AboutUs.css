@@ -1,0 +1,199 @@
+.about-us-page {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  background: linear-gradient(135deg, #FFF0F3 0%, #FAFAFB 100%);
+  padding: 140px 0 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid #E2E8F0;
+  margin-top: 72px;
+}
+
+.hero-content {
+  width: 50%;
+  padding-left: 10%;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-family: 'Outfit', 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  line-height: 1.15;
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-title-dark {
+  color: var(--secondary);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.hero-title-pink {
+  color: var(--primary);
+  font-weight: 800;
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Tagline Section */
+.tagline-section {
+  text-align: center;
+  padding: 60px 15%;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  color: var(--secondary);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 600;
+  background: #FFFFFF;
+}
+
+/* Who We Are Section */
+.who-we-are-section {
+  display: flex;
+  padding: 80px 10%;
+  gap: 48px;
+  align-items: center;
+  max-width: 1380px;
+  margin: 0 auto;
+}
+
+.who-we-are-content {
+  flex: 1;
+}
+
+.section-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.who-we-are-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #475569;
+}
+
+.who-we-are-images {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.image-container {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.who-are-we-image {
+  width: 100%;
+  max-width: 440px;
+  height: 300px;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Business Section */
+.business-section {
+  display: flex;
+  padding: 80px 10%;
+  gap: 48px;
+  align-items: center;
+  background-color: #FFFFFF;
+  position: relative;
+}
+
+.business-image {
+  flex: 1;
+}
+
+.business-image img {
+  max-width: 100%;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.business-content {
+  flex: 1;
+}
+
+.vendor-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.vendor-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 24px;
+  border: 1px solid #E2E8F0;
+  border-radius: var(--radius-md);
+  background-color: #F8FAFC;
+  transition: var(--transition-fast);
+  min-width: 130px;
+}
+
+.vendor-card:hover {
+  transform: translateY(-4px);
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.vendor-card i {
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.vendor-card span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--secondary);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .hero-title { font-size: 2.5rem; }
+  .who-we-are-section, .business-section { flex-direction: column; }
+  .who-we-are-images { margin-top: 30px; }
+  .vendor-cards-container { justify-content: center; }
+}
+
+@media (max-width: 768px) {
+  .hero-section { flex-direction: column; padding-top: 100px; text-align: center; }
+  .hero-content { width: 100%; padding: 0 20px; }
+  .tagline-section { padding: 40px 5%; }
+  .who-we-are-section, .business-section { padding: 40px 5%; }
+  .who-are-we-image { height: 220px; }
+}

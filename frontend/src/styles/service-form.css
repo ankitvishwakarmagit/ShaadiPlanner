@@ -1,0 +1,301 @@
+/* Service Form Container */
+.service-form-container {
+  padding: 90px 40px 40px;
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--secondary);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Service Form Card */
+.service-form-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 40px;
+  width: 100%;
+  max-width: 900px;
+  border: 1px solid #E2E8F0;
+  transition: var(--transition-normal);
+}
+
+.service-form-card h1 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--secondary);
+  margin-bottom: 30px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+/* Form Group */
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--secondary);
+  margin-bottom: 8px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1.5px solid #E2E8F0;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  color: var(--secondary);
+  background: #F8FAFC;
+  transition: var(--transition-fast);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: #FFFFFF;
+  box-shadow: 0 0 0 4px rgba(215, 56, 94, 0.12);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-group select[multiple] {
+  height: 120px;
+}
+
+/* Photo Upload Area */
+.photo-upload-area {
+  border: 2px dashed #CBD5E1;
+  border-radius: var(--radius-md);
+  padding: 28px;
+  text-align: center;
+  background: #F8FAFC;
+  transition: var(--transition-fast);
+  position: relative;
+}
+
+.photo-upload-area:hover {
+  border-color: var(--primary);
+  background: var(--primary-light);
+}
+
+.photo-upload-area input[type="file"] {
+  display: none;
+}
+
+.photo-upload-area label {
+  display: block;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.photo-upload-area .upload-placeholder {
+  font-size: 14px;
+  color: var(--text-muted);
+  margin-bottom: 12px;
+}
+
+.photo-upload-area .upload-icon {
+  font-size: 36px;
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+/* Photo Preview */
+.photo-preview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.preview-item {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-fast);
+}
+
+.preview-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.preview-item:hover {
+  transform: scale(1.05);
+}
+
+.preview-item .remove-photo {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Category Specific Fields & Packages */
+.category-specific-fields h3,
+.pricing-packages h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary);
+  margin: 32px 0 20px;
+}
+
+.package-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 20px;
+  background: #F8FAFC;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  border: 1px solid #E2E8F0;
+  position: relative;
+}
+
+.package-row .form-group {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 0;
+}
+
+.remove-package-btn {
+  background: #EF4444;
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  position: absolute;
+  top: 12px;
+  right: 12px;
+}
+
+.remove-package-btn:hover {
+  background: #DC2626;
+  transform: scale(1.1);
+}
+
+.add-package-btn {
+  background: var(--primary-gradient);
+  border: none;
+  padding: 10px 24px;
+  border-radius: var(--radius-pill);
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-glow);
+  transition: var(--transition-fast);
+  cursor: pointer;
+  margin: 16px 0;
+}
+
+.add-package-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(215, 56, 94, 0.45);
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.form-actions .btn {
+  border-radius: var(--radius-pill);
+  padding: 12px 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--transition-fast);
+}
+
+.form-actions .btn-outline-secondary {
+  border: 1.5px solid #CBD5E1;
+  color: var(--secondary);
+  background: transparent;
+}
+
+.form-actions .btn-outline-secondary:hover {
+  background: #F1F5F9;
+}
+
+.form-actions .btn-primary {
+  background: var(--primary-gradient);
+  border: none;
+  color: #fff;
+  box-shadow: var(--shadow-glow);
+}
+
+.form-actions .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(215, 56, 94, 0.45);
+}
+
+@media (max-width: 768px) {
+  .service-form-container {
+    padding: 70px 16px 20px;
+  }
+  .service-form-card {
+    padding: 24px;
+  }
+  .package-row {
+    flex-direction: column;
+  }
+  .package-row .form-group {
+    min-width: 100%;
+  }
+  .form-actions {
+    flex-direction: column;
+  }
+  .form-actions .btn {
+    width: 100%;
+  }
+}
